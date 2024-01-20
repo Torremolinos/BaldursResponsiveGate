@@ -1,21 +1,52 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-
+  background-color: black;
+}
+.larian {
+  background: white;
+  margin-left: 5rem;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 /*doy estilo italic porque la etiqueta pre me da salto de carro*/
-.pre{
-    font-style:italic;
+.pre {
+  font-style: italic;
 }
 
 /*doy estilos a los section para ir empezando a pintar el html*/
-.s1{
-    background: url(/assets/imgs/b1Hams.jpg) center/cover;
-    height: 80vh;
-    /*aqui realizaremos el corte*/
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-    position: relative;
+.s1 {
+  background: url(/assets/imgs/b1Hams.jpg) center/cover;
+  height: 80vh;
+  /*aqui realizaremos el corte*/
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  position: relative;
+  color: white;
+}
+
+.feet {
+  display: flex;
+}
+
+li {
+  list-style: none;
+  margin-right: 5rem;
+}
+
+a {
+  color: green;
+}
+
+h3{
+    color: white;
+}
+p{
+    color: white;
 }
