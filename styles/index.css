@@ -1,19 +1,49 @@
+@font-face {
+  font-family: "Mulish";
+  src: url("/assets/fonts/static/Mulish-Italic.ttf") format("truetype");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --color--white: white;
+  --color--h3: rgb(54, 14, 0);
+  --backgroundBody-color: black;
+  --backgroundLarianLogo-color: rgba(173, 59, 6, 0.953);
+  --LarianMargin-left: 5rem;
+  --LarianWidth: 6rem;
+  --LarianHeight: 6rem;
+  --h1ps1--font-Size: 4rem;
+  --footParts--padding: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --color--white: white;
+    --color--h3: rgb(19, 5, 0);
+    --backgroundBody-color: black;
+    --backgroundLarianLogo-color: rgba(173, 120, 6, 0.953);
+    --LarianMargin-left: 2.5rem;
+    --LarianWidth: 3rem;
+    --LarianHeight: 3rem;
+    --h1ps1--font-Size: 2rem;
+    --footParts--padding: 1rem;
+  }
+}
+
 body {
-  background-color: rgb(0, 0, 0);
+  background-color: var(--backgroundBody-color);
 }
 
 .larian {
-  background-color: rgba(173, 120, 6, 0.953);
-  margin-left: 5rem;
-  width: 6rem;
-  height: 6rem;
-
+  background-color: var(--backgroundLarianLogo-color);
+  margin-left: var(--LarianMargin-left);
+  width: var(--LarianWidth);
+  height: var(--LarianHeight);
 }
 
 nav {
@@ -24,9 +54,6 @@ nav {
 }
 
 /*doy estilo italic porque la etiqueta pre me da salto de carro*/
-.pre {
-  font-style: italic;
-}
 
 /*doy estilos a los section para ir empezando a pintar el html*/
 .s1 {
@@ -35,26 +62,24 @@ nav {
   /*aqui realizaremos el corte*/
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   position: relative;
-  color: rgb(255, 255, 255);
-  
+  color: var(--color--white);
 }
 
-.s2{
+.s2 {
   text-align: center;
 }
 
-.ps1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
+.ps1 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
-.h1ps1{
-    color: rgb(255, 255, 255); /*hacer globales las repetidas o las de mas uso*/
-    font-size: 2,5rem;
-  }
+.h1ps1 {
+  color: var(--color--white); /*hacer globales las repetidas o las de mas uso*/
+  font-size: var(--h1ps1--font-Size);
+}
 .feet {
   display: flex;
 }
@@ -66,18 +91,59 @@ li {
 }
 
 a {
-  color:rgb(255, 255, 255);
-
+  color: var(--color--white);
+  text-decoration: none;
 }
 
-h1{
-  color: rgb(255, 255, 255);
-  font-size: 4rem;
-}
-h3{
-  color: white;
+h3 {
+  color: var(--color--h3);
 }
 p {
-  color: rgb(255, 255, 255)
+  color: var(--color--white);
 }
 
+.feet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  clip-path: polygon(0 9%, 100% 0%, 100% 100%, 0% 100%);
+  background: radial-gradient(
+    circle,
+    rgba(250, 127, 56, 0.87) 0%,
+    rgba(220, 68, 22, 0.555) 100%
+  );
+}
+.feet2{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  color: rgb(255, 255, 255);
+  padding: 2rem;
+  text-align: center;
+  align-items: center;
+}
+
+.f1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.f2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.f3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.feet3 {
+  color: rgb(38, 34, 34);
+  padding: 2rem;
+  text-align: center;
+}
