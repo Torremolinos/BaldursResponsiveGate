@@ -3,19 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
+
 .larian {
-  background: white;
+  background-color: rgba(173, 120, 6, 0.953);
   margin-left: 5rem;
+  width: 6rem;
+  height: 6rem;
+
 }
+
 nav {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
+
 /*doy estilo italic porque la etiqueta pre me da salto de carro*/
 .pre {
   font-style: italic;
@@ -23,14 +30,31 @@ nav {
 
 /*doy estilos a los section para ir empezando a pintar el html*/
 .s1 {
-  background: url(/assets/imgs/b1Hams.jpg) center/cover;
+  background: url(/assets/imgs/baldurs.jpg) center/cover;
   height: 80vh;
   /*aqui realizaremos el corte*/
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   position: relative;
-  color: white;
+  color: rgb(255, 255, 255);
+  
 }
 
+.s2{
+  text-align: center;
+}
+
+.ps1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+.h1ps1{
+    color: rgb(255, 255, 255); /*hacer globales las repetidas o las de mas uso*/
+    font-size: 2,5rem;
+  }
 .feet {
   display: flex;
 }
@@ -38,15 +62,22 @@ nav {
 li {
   list-style: none;
   margin-right: 5rem;
+  display: inline-block; /*Con esto pongo en linea la lista de Li.*/
 }
 
 a {
-  color: green;
+  color:rgb(255, 255, 255);
+
 }
 
+h1{
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+}
 h3{
-    color: white;
+  color: white;
 }
-p{
-    color: white;
+p {
+  color: rgb(255, 255, 255)
 }
+
