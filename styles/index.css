@@ -6,7 +6,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /*en before en after probar inheret en vez de borderbox*/
 }
 
 :root {
@@ -58,7 +58,7 @@ nav {
 /*doy estilos a los section para ir empezando a pintar el html*/
 .s1 {
   background: url(/assets/imgs/baldurs.jpg) center/cover;
-  height: 79vh;
+  height: 73vh;
   /*aqui realizaremos el corte*/
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   position: relative;
@@ -88,6 +88,22 @@ nav {
   gap: 2rem;
   padding: 3rem;
   background-color: #4d4d4d;
+}
+:hover[class*="card1"] {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+:hover[class*="card2"] {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+:hover[class*="card3"] {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+:hover[class*="card4"] {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
 }
 .imagen {
   width: 100%;
@@ -153,7 +169,8 @@ button{
   font-size: var(--h1ps1--font-Size);
 }
 .feet {
-  padding: 5rem;
+  height: 20rem;
+  padding: 3rem;
   display: flex;
 }
 
