@@ -69,6 +69,74 @@ nav {
   text-align: center;
 }
 
+.s3 {
+  width: 100%;
+  color: var(--color--white);
+  background: #4d4d4d;
+  text-align: center;
+}
+.conteiner-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #4d4d4d;
+}
+.imagen {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-color: var(--color--white);
+  background: #fffefe;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+}
+.card1 {
+  
+  width: auto;
+  height: auto;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  background: #ffffff;
+  padding: 0;
+
+}
+.card2 {
+ 
+  width: auto;
+  height: auto;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  background: #ffffff;
+ 
+}
+.contenainer-text{
+  color: #000;
+  margin: auto;
+  width: 100%;
+}
+
+.contenainer-p{
+  color: #000;
+}
+
+button{
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 1rem;
+}
 .ps1 {
   position: relative;
   top: 50%;
@@ -105,7 +173,7 @@ p {
 .feet {
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   clip-path: polygon(0 9%, 100% 0%, 100% 100%, 0% 100%);
   background: radial-gradient(
     circle,
@@ -113,12 +181,12 @@ p {
     rgba(220, 68, 22, 0.555) 100%
   );
 }
-.feet2{
+.feet2 {
   width: 100%;
   display: flex;
   flex-direction: row;
   color: rgb(255, 255, 255);
-  padding: 2rem;
+  padding: var(--footParts--padding);
   text-align: center;
   align-items: center;
 }
@@ -144,6 +212,6 @@ p {
 
 .feet3 {
   color: rgb(38, 34, 34);
-  padding: 2rem;
+  padding: var(--footParts--padding);
   text-align: center;
 }
