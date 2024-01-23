@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,28 +9,29 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="/index.html">Inicio</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <form action=""></form>
-        </section>
+    <main class="contenedor-form">
+        <h2>Contáctanos</h2>
+        <form name="formulario" id="formulario" action="envioCorreo.html" method="get">
+            <section>
+                <label for="nombre">Nombre:</label><br>
+                <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="name">
+                <br>
+                <label for="apellido">Apellido</label><br>
+                <input id="apellido" name="apellido" type="text" placeholder="Apellido" class="lastname">
+                <br>
+                <label for="telefono">Telefono:</label><br>
+                <input id="telefono" name="telefono" type="text" placeholder="Teléfono" class="phone">
+                <br>
+                <input id="correo" name="correo" type="email" placeholder="Correo" class="email">
+                <br>
+                <textarea id="mensaje" name="mensaje" placeholder="Comentarios" cols="45" rows="10"
+                    class="message"></textarea>
+                <br>
+                <input id="enviar" type="submit" class="btn" value="Enviar">
+            </section>
+        </form>
     </main>
-    <footer>
-        <div>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-        </div>
-        <div>
-            <p></p>
-        </div>
-
-    </footer>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

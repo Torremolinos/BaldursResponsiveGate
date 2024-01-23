@@ -1,27 +1,29 @@
 @font-face {
   font-family: "Mulish";
-  src: url("/assets/fonts/static/Mulish-Italic.ttf") format("truetype");
+  src: url("/assets/fonts/fonts/static/Mulish-BlackItalic.ttf") format("truetype");
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /*en before en after probar inheret en vez de borderbox*/
+  box-sizing: border-box;
 }
-
 :root {
   --color--white: white;
-  --color--h3: rgb(54, 14, 0);
+  --color--h3: rgb(154, 17, 8);
   --backgroundBody-color: black;
   --backgroundLarianLogo-color: rgba(173, 59, 6, 0.953);
   --LarianMargin-left: 5rem;
   --LarianWidth: 6rem;
   --LarianHeight: 6rem;
-  --h1ps1--font-Size: 4rem;
+  --h1ps1--font-Size: 5rem;
   --footParts--padding: 2rem;
+  --h1--font-size: 3rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024) {
   :root {
     --color--white: white;
     --color--h3: rgb(19, 5, 0);
@@ -32,11 +34,18 @@
     --LarianHeight: 3rem;
     --h1ps1--font-Size: 2rem;
     --footParts--padding: 1rem;
+    --h1--font-size: 1rem;
+    --font-family: "Mulish";
   }
+}
+h1{
+  font-family:var(--font-family);
+  font-family: "Mulish";
 }
 
 body {
   background-color: var(--backgroundBody-color);
+  font-family: "Mulish";
 }
 
 .larian {
@@ -51,6 +60,7 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-family: "Mulish";
 }
 
 /*doy estilo italic porque la etiqueta pre me da salto de carro*/
@@ -63,6 +73,7 @@ nav {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   position: relative;
   color: var(--color--white);
+  font-family: var(--font-family);
 }
 
 .s2 {
@@ -73,21 +84,31 @@ nav {
 }
 
 .s3 {
-  padding: 5rem;
+  padding: 1rem;
   width: 100%;
   color: var(--color--white);
   background: #4d4d4d;
   text-align: center;
+  font-family: var(--font-family);
+  
 }
 .conteiner-cards {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
   gap: 2rem;
-  padding: 3rem;
+  padding: 1rem;
   background-color: #4d4d4d;
+  font-family: "Mulish";
+  
+}
+@media screen and (max-width: 1100px) {
+  .conteiner-cards {
+    flex-direction: column; /* Cambiar a column en pantallas más pequeñas */
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 :hover[class*="card1"] {
   transform: scale(1.1);
@@ -112,7 +133,6 @@ nav {
   border-color: var(--color--white);
   background: #fffefe;
 }
-
 .card {
   width: 100%;
   height: 100%;
@@ -122,34 +142,29 @@ nav {
   background: #ffffff;
 }
 .card1 {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px 0 rgba(249, 48, 48, 0.975);
+  background: #706964;
   
-  width: auto;
-  height: auto;
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
-  background: #ffffff;
-  padding: 0;
+}
 
-}
-.card2 {
- 
-  width: auto;
-  height: auto;
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
-  background: #ffffff;
- 
-}
-.contenainer-text{
-  color: #000;
+.contenainer-text {
+  color: #000000;
   margin: auto;
   width: 100%;
+  height: 100%;
+  padding: 1rem;
+
 }
 
-.contenainer-p{
+.contenainer-p {
   color: #000;
+  padding: 1rem;
 }
 
-button{
-  background: #000;
+button {
+  background: #9e2929;
   color: #fff;
   border: none;
   padding: 1rem;
@@ -167,11 +182,18 @@ button{
 .h1ps1 {
   color: var(--color--white); /*hacer globales las repetidas o las de mas uso*/
   font-size: var(--h1ps1--font-Size);
+  font-family: "Mulish";
+}
+
+footer {
+ background: rgb(33, 33, 33);
+ clip-path: polygon(0 4%, 100% 4%, 100% 100%, 0 100%);
 }
 .feet {
-  height: 20rem;
+  height: auto;
   padding: 3rem;
   display: flex;
+  font-family: "Mulish";
 }
 
 li {
@@ -196,19 +218,18 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  clip-path: polygon(0 9%, 100% 0%, 100% 100%, 0% 100%);
-  background: radial-gradient(
-    circle,
-    rgba(250, 127, 56, 0.87) 0%,
-    rgba(220, 68, 22, 0.555) 100%
-  );
+
+}
+.feets-conteiner{
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 .feet2 {
   width: 100%;
   display: flex;
   flex-direction: row;
   color: rgb(255, 255, 255);
-  padding: var(--footParts--padding);
   text-align: center;
   align-items: center;
 }
@@ -217,23 +238,29 @@ p {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+
 }
 .f2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+
 }
 .f3 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+
+  
+}
+.logos{
+  width: 100%;
+  margin-top: 3rem;
+  padding: 3rem;
 }
 
-.feet3 {
-  color: rgb(38, 34, 34);
-  padding: var(--footParts--padding);
-  text-align: center;
+.h1S3{
+  margin: 3rem;
+  font-size: 2rem;
+
 }
