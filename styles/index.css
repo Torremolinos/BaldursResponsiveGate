@@ -1,9 +1,24 @@
 @font-face {
   font-family: "Mulish";
-  src: url("/assets/fonts/fonts/static/Mulish-BlackItalic.ttf") format("truetype");
+  src: url("/assets/fonts/fonts/static/Mulish-BlackItalic.ttf")
+    format("truetype");
 }
 
-*,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--backgroundBody-color);
+  font-family: "Mulish";
+}
+
+main {
+  overflow: hidden; /*para que no se salga el contenido de los section*/
+}
+
 *::before,
 *::after {
   margin: 0;
@@ -11,40 +26,37 @@
   box-sizing: border-box;
 }
 :root {
-  --color--white: white;
+  --color--white: rgb(218, 179, 107);
   --color--h3: rgb(154, 17, 8);
   --backgroundBody-color: black;
   --backgroundLarianLogo-color: rgba(173, 59, 6, 0.953);
   --LarianMargin-left: 5rem;
   --LarianWidth: 6rem;
   --LarianHeight: 6rem;
-  --h1ps1--font-Size: 5rem;
+  --h1ps1--font-Size: 9rem;
   --footParts--padding: 2rem;
   --h1--font-size: 3rem;
+  --font-family: "Mulish";
 }
 
-@media screen and (max-width: 1024) {
+@media screen and (max-width: 1024px) {
   :root {
-    --color--white: white;
-    --color--h3: rgb(19, 5, 0);
+    --color--white: rgb(218, 179, 107);
+    --color--h3: rgb(154, 17, 8);
     --backgroundBody-color: black;
-    --backgroundLarianLogo-color: rgba(173, 120, 6, 0.953);
-    --LarianMargin-left: 2.5rem;
-    --LarianWidth: 3rem;
-    --LarianHeight: 3rem;
-    --h1ps1--font-Size: 2rem;
-    --footParts--padding: 1rem;
-    --h1--font-size: 1rem;
+    --backgroundLarianLogo-color: rgba(173, 123, 6, 0.953);
+    --LarianMargin-left: 5rem;
+    --LarianWidth: 6rem;
+    --LarianHeight: 6rem;
+    --h1ps1--font-Size: 4rem;
+    --footParts--padding: 2rem;
+    --h1--font-size: 3rem;
     --font-family: "Mulish";
   }
 }
-h1{
-  font-family:var(--font-family);
-  font-family: "Mulish";
-}
-
-body {
-  background-color: var(--backgroundBody-color);
+.h1ps1 {
+  font-size: var(--h1ps1--font-Size);
+  font-family: var(--font-family);
   font-family: "Mulish";
 }
 
@@ -62,107 +74,33 @@ nav {
   justify-content: space-between;
   font-family: "Mulish";
 }
-
-/*doy estilo italic porque la etiqueta pre me da salto de carro*/
-
+.headerFlex {
+  display: flex;
+}
 /*doy estilos a los section para ir empezando a pintar el html*/
 .s1 {
   background: url(/assets/imgs/baldurs.jpg) center/cover;
-  height: 73vh;
   /*aqui realizaremos el corte*/
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   position: relative;
   color: var(--color--white);
   font-family: var(--font-family);
+  height: 87vh;
 }
-
+.s1::before {
+  content: "";
+  background: black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
 .s2 {
   text-align: center;
   width: 100%;
   height: 100%;
   padding: 5rem;
 }
-
-.s3 {
-  padding: 1rem;
-  width: 100%;
-  color: var(--color--white);
-  background: #4d4d4d;
-  text-align: center;
-  font-family: var(--font-family);
-  
-}
-.conteiner-cards {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-  background-color: #4d4d4d;
-  font-family: "Mulish";
-  
-}
-@media screen and (max-width: 1100px) {
-  .conteiner-cards {
-    flex-direction: column; /* Cambiar a column en pantallas más pequeñas */
-    max-width: 100%;
-    max-height: 100%;
-  }
-}
-:hover[class*="card1"] {
-  transform: scale(1.1);
-  transition: transform 0.5s ease;
-}
-:hover[class*="card2"] {
-  transform: scale(1.1);
-  transition: transform 0.5s ease;
-}
-:hover[class*="card3"] {
-  transform: scale(1.1);
-  transition: transform 0.5s ease;
-}
-:hover[class*="card4"] {
-  transform: scale(1.1);
-  transition: transform 0.5s ease;
-}
-.imagen {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-color: var(--color--white);
-  background: #fffefe;
-}
-.card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #ffffff;
-}
-.card1 {
-  width: 100%;
-  height: auto;
-  box-shadow: 0 0 10px 0 rgba(249, 48, 48, 0.975);
-  background: #706964;
-  
-}
-
-.contenainer-text {
-  color: #000000;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-
-}
-
-.contenainer-p {
-  color: #000;
-  padding: 1rem;
-}
-
 button {
   background: #9e2929;
   color: #fff;
@@ -184,19 +122,11 @@ button {
   font-size: var(--h1ps1--font-Size);
   font-family: "Mulish";
 }
-
-footer {
- background: rgb(33, 33, 33);
- clip-path: polygon(0 4%, 100% 4%, 100% 100%, 0 100%);
-}
-.feet {
-  height: auto;
-  padding: 3rem;
-  display: flex;
-  font-family: "Mulish";
+.navHiden {
+  display: none;
 }
 
-li {
+header li {
   list-style: none;
   margin-right: 5rem;
   display: inline-block; /*Con esto pongo en linea la lista de Li.*/
@@ -214,53 +144,214 @@ p {
   color: var(--color--white);
 }
 
-.feet {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
+.h1S3 {
+  margin-top: 3rem;
+  font-size: 2rem;
 }
-.feets-conteiner{
+
+/*-----------------pie de pagina--------------------*/
+.pie-pagina {
+  width: 100%;
+  background-color: #0a141d;
+}
+.pie-pagina .grupo-1 {
+  /*para que se vea en forma de grid*/
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure {
   width: 100%;
   height: 100%;
-  text-align: center;
-}
-.feet2 {
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  color: rgb(255, 255, 255);
-  text-align: center;
+  justify-content: center;
   align-items: center;
 }
-
-.f1 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
+.pie-pagina .grupo-1 .box figure img {
+  /**/
+  width: 250px;
 }
-.f2 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
+.pie-pagina .grupo-1 .box h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
 }
-.f3 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  
+.pie-pagina .grupo-1 .box p {
+  color: #efefef;
+  margin-bottom: 10px;
 }
-.logos{
-  width: 100%;
-  margin-top: 3rem;
-  padding: 3rem;
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: aqua;
+}
+.pie-pagina .grupo-2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
 }
 
-.h1S3{
-  margin: 3rem;
-  font-size: 2rem;
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1 {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
 
+/*--------------------CAAAARDS------------------------*/
+article {
+  --img-scale: 1.001;
+  --title-color: rgb(255, 255, 255);
+  --link-icon-translate: -1.25rem;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: none;
+  background: #9e1919;
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
+article h2 {
+  margin: 0 0 1.125rem 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9; /*Esto menuda fumada*/
+  overflow: hidden;
+}
+
+article img {
+  max-width: 100%;
+  transform-origin: center;
+  transform: scale(var(--img-scale));
+  transition: transform 0.4s ease-in-out;
+}
+
+.article-body {
+  padding: 1.5rem;
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  background: #000;
+  padding: 0.5rem 1rem;
+  margin-top: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+article a:focus {
+  outline: 1px dotted #000000;
+}
+
+article a .icon {
+  min-width: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+/* utilizando el selector pseudo relacional has() para actualizar propiedades personalizadas (fumada)*/
+article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #0f0b03;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgb(30, 15, 15) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.articles {
+  display: grid;
+  max-width: 100%;
+  padding: 1.5rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  background: #efecec;
+  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);
+}
+
+@media screen and (max-width: 960px) {
+  article {
+    container: card/inline-size;
+  }
+  .article-body p {
+    display: none;
+  }
+}
+
+@container card (min-width: 380px) {
+  .article-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1rem;
+  }
+  .article-body {
+    padding-left: 0;
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  figure img {
+    height: 100%;
+    aspect-ratio: 1; /*Esto menuda fumada tb pero es el ratio de la imagen, 1 */
+    object-fit: cover;
+  }
+}
+
+/*para que no se vea el texto de la etiqueta*/
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

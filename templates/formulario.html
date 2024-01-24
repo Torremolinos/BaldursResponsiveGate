@@ -4,34 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario para contactar con nosotros</title>
     <link rel="stylesheet" href="/styles/formulario.css">
 </head>
 
 <body>
+ 
     <main class="contenedor-form">
-        <h2>Contáctanos</h2>
-        <form name="formulario" id="formulario" action="envioCorreo.html" method="get">
-            <section>
-                <label for="nombre">Nombre:</label><br>
-                <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="name">
-                <br>
-                <label for="apellido">Apellido</label><br>
-                <input id="apellido" name="apellido" type="text" placeholder="Apellido" class="lastname">
-                <br>
-                <label for="telefono">Telefono:</label><br>
-                <input id="telefono" name="telefono" type="text" placeholder="Teléfono" class="phone">
-                <br>
-                <input id="correo" name="correo" type="email" placeholder="Correo" class="email">
-                <br>
-                <textarea id="mensaje" name="mensaje" placeholder="Comentarios" cols="45" rows="10"
-                    class="message"></textarea>
-                <br>
-                <input id="enviar" type="submit" class="btn" value="Enviar">
-            </section>
-        </form>
+        
+        <div class="wrap-form">
+            <div class="title">
+                <h1>Contáctanos</h1>
+            </div>
+            <form name="formulario" id="formulario" action="../templates/envio.html" method="get">
+                <ul class="errores" id="errores"></ul>
+                <div class="user-details">
+                    <div class="input-box">
+                        <label for="nombre" class="details">Nombre:</label>
+                        <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="name">
+                    </div>
+                    <div class="user-details">
+                        <label for="apellido">Apellido</label>
+                        <input id="apellido" name="apellido" type="text" placeholder="Apellido" class="lastname">
+                    </div>
+
+                    <div class="user-details">
+                        <label for="telefono">Telefono:</label>
+                        <input id="telefono" name="telefono" type="text" placeholder="Teléfono" class="phone">
+                    </div>
+                    <label for="correo">Correo</label>
+                    <input id="correo" name="correo" type="email" placeholder="Correo" class="email">
+                    <div class="divTextArea">
+                        <label for="mensaje">Mensaje</label><br>
+                        <textarea id="mensaje" name="mensaje" placeholder="Comentarios" cols="45" rows="10"
+                            class="message"></textarea>
+                        <br>
+                        <div class="button"><input id="enviar" type="submit" class="btn" value="Enviar"></div>
+                        <br>
+                    </div>
+                </div>
+            </form>
+        </div>
     </main>
-    <script src="scripts/main.js"></script>
+    <script src="/scripts/main.js"></script>
 </body>
 
 </html>
