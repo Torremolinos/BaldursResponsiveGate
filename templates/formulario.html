@@ -32,22 +32,22 @@
                 <h1>Contáctanos</h1>
             </div>
             <form name="formulario" id="formulario" action="../templates/envio.html" method="get">
-                <ul class="errores" id="errores"></ul>
+               
                 <div class="user-details">
                     <div class="input-box">
-                        <label for="nombre" class="details">Nombre:</label>
+                        <label for="nombre" class="details">Nombre:</label><br>
                         <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="name">
                     </div>
                     <div class="user-details">
-                        <label for="apellido">Apellido</label>
+                        <label for="apellido">Apellido</label><br>
                         <input id="apellido" name="apellido" type="text" placeholder="Apellido" class="lastname">
                     </div>
 
                     <div class="user-details">
-                        <label for="telefono">Telefono:</label>
+                        <label for="telefono">Telefono:</label><br>
                         <input id="telefono" name="telefono" type="text" placeholder="Teléfono" class="phone">
                     </div>
-                    <label for="correo">Correo</label>
+                    <label for="correo">Correo</label><br>
                     <input id="correo" name="correo" type="email" placeholder="Correo" class="email">
                     <div class="divTextArea">
                         <label for="mensaje">Mensaje</label><br>
@@ -58,6 +58,7 @@
                         <br>
                     </div>
                 </div>
+                <ul class="errores" id="errores"></ul>
             </form>
         </div>
     </main>

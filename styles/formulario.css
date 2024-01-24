@@ -9,7 +9,7 @@
   background: url(/assets/imgs/maxresdefault.jpg) center/cover;
   position: relative;
   background-repeat: no-repeat;
-  height: 50rem;
+min-height:  70rem;
   width: 100%;
   margin: 0;
   font-family: "Mulish";
@@ -25,13 +25,14 @@ form {
   text-align: center;
   background: linear-gradient(to right, #302c2c, #040100a9);
   width: 34%;
-  padding-top: 2rem;
+  padding-top: 1.25rem;
   align-items: center;
   margin: auto;
   border-radius: .3125rem;
 }
 form input{
   border-radius: .3125rem;
+  width: 50%;
 }
 form label {
   color: #ffffff;
