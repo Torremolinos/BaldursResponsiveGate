@@ -55,7 +55,7 @@ main {
     --h1--font-size: 3rem;
     --font-family: "Mulish";
     --s2--font-size: 1rem;
-    --s2--max-height: 600x; 
+    --s2--max-height: 37.5rem; 
   }
 }
 .h1ps1 {
@@ -177,6 +177,7 @@ header {
   width: 100%;
   height: 100%;
   max-height: var(--s2--max-height); 
+ 
 }
 .s2 p{
   font-size: var(--s2--font-size);
@@ -296,16 +297,21 @@ p {
 }
 @media screen and (max-width: 800px) {
   .pie-pagina .grupo-1 {
-    width: 50%;
+    width: 40%;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0px;
+  }
+  .pie-pagina .grupo-1 .box figure img {
+    width: 6.25rem;
+    margin-right: 2rem;
   }
 }
 
 /*--------------------CAAAARDS------------------------*/
 
 article {
+  margin-top: 3rem;
   --img-scale: 1.001;
   --title-color: rgb(255, 255, 255);
   --link-icon-translate: -1.25rem;
@@ -329,7 +335,6 @@ article a::after {
 
 article h2 {
   margin: 0 0 1.125rem 0;
-  font-family: "Bebas Neue", cursive;
   font-size: 1.9rem;
   letter-spacing: 0.06em;
   color: var(--title-color);
@@ -395,7 +400,7 @@ article:has(:hover, :focus) {
   padding: 1.5rem;
   margin-inline: auto;
   padding-inline: 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); /* Ancho mínimo de 25rem, ajuste automático */
   gap: 1.5rem;
   background: #efecec;
   clip-path: polygon(0 0, 100% 3%, 100% 100%, 0% 100%);
