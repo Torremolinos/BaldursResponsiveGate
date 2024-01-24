@@ -5,23 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prueba para ejercicio y examen</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="#">
-                <img src="/assets/imgs/svg/logo-barcelona.svg" alt="" class="larian">
-            </a>
-            <ul>
+        <a href="#">
+            <img src="/assets/imgs/svg/logo-barcelona.svg" alt="" class="logo">
+        </a>
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+
+        <nav class="nav" id="nav">
+            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            <ul class="nav-list">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="/templates/acerca.html">Acerca de</a></li>
+                <li><a href="https://larian.com/">Acerca de</a></li>
                 <li><a href="/templates/formulario.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="wraper-cards">
         <section class="s1">
             <div class="ps1">
                 <h1 class="h1ps1">BALDURS GATE 3</h1>
@@ -66,7 +71,7 @@
             <article>
                 <div class="article-wrapper">
                     <figure>
-                        <img src="/assets/imgs/UI 11.png" alt="" />
+                        <img src="/assets/imgs/gif/MONK GIF4.gif" alt="" />
                     </figure>
                     <div class="article-body">
                         <h2>Combate</h2>
@@ -77,7 +82,7 @@
                         </p>
                         <br>
                         <hr>
-                        <a href="/assets/imgs/UI 11.png" class="read-more">
+                        <a href="/assets/imgs/gif/MONK GIF4.gif" class="read-more">
                             Pulsa para ir a la imagen <span class="sr-only">about this is some title</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
                                 fill="currentColor">
@@ -154,6 +159,8 @@
                             y secretos. Cada uno con su propia historia y habilidades. ¿Con quien te unirás en tu
                             aventura?
                         </p>
+                        <br>
+                        <hr>
                         <a href="/assets/imgs/b1Hams.jpg" class="read-more">
                             Pulsa para ir a la imagen <span class="sr-only">about this is some title</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20"
@@ -172,27 +179,27 @@
         <section class="grupo-1">
             <div class="box">
                 <figure>
-                    <a href="#">
+                    <a href="index.html">
                         <img src="/assets/imgs/svg/Copy-of-BG3_logo_1.svg" alt="Logo Baldursgate3">
                     </a>
                 </figure>
             </div>
             <div class="box">
                 <h2>SOBRE NOSOTROS</h2>
-                <a href="#">Company</a>
-                <a href="#">Teams</a>
-                <a href="#">Carrers</a>
+                <a href="https://larian.com/">Company</a>
+                <a href="https://larian.com/playtest">PlayTest</a>
+                <a href="https://larian.com/careers">Carrers</a>
             </div>
             <div class="box">
                 <div class="red-social">
                     <h2>REDES SOCIALES</h2>
                     <a href="#"><img src="assets/imgs/5296520_bubble_chat_mobile_whatsapp_whatsapp logo_icon.png"
                             alt=""></a>
-                    <a href="#"><img
+                    <a href="https://www.facebook.com/LarianStudios/?locale=es_ES"><img
                             src="assets/imgs/5296500_fb_social media_facebook_facebook logo_social network_icon.png"
                             alt=""></a>
-                    <a href="#"><img src="assets/imgs/5296501_linkedin_network_linkedin logo_icon.png" alt=""></a>
-                    <a href="#"><img src="assets/imgs/5296765_camera_instagram_instagram logo_icon.png" alt=""></a>
+                    <a href="https://www.linkedin.com/company/larian-studios/?originalSubdomain=es"><img src="assets/imgs/5296501_linkedin_network_linkedin logo_icon.png" alt=""></a>
+                    <a href="https://www.instagram.com/larianstudios/"><img src="assets/imgs/5296765_camera_instagram_instagram logo_icon.png" alt=""></a>
                 </div>
             </div>
         </section>
@@ -203,7 +210,7 @@
             and
             otros términos son marcas registradas de Larian Studios.</div>
     </footer>
-    <script src="scripts/main.js"></script>
+    <script src="/scripts/hamburguer.js"></script>
 </body>
 
 </html>
