@@ -37,6 +37,8 @@ main {
   --footParts--padding: 2rem;
   --h1--font-size: 3rem;
   --font-family: "Mulish";
+  --s2--font-size: 2rem;
+  --s2--max-height: 1200px; 
 }
 
 @media screen and (max-width: 1024px) {
@@ -52,6 +54,8 @@ main {
     --footParts--padding: 2rem;
     --h1--font-size: 3rem;
     --font-family: "Mulish";
+    --s2--font-size: 1rem;
+    --s2--max-height: 600x; 
   }
 }
 .h1ps1 {
@@ -158,7 +162,7 @@ header {
   position: relative;
   color: var(--color--white);
   font-family: var(--font-family);
-  height: 70vh;
+  height: 80vh;
 }
 .s1::before {
   content: "";
@@ -172,7 +176,14 @@ header {
   text-align: center;
   width: 100%;
   height: 100%;
-  padding: 5rem;
+  max-height: var(--s2--max-height); 
+}
+.s2 p{
+  font-size: var(--s2--font-size);
+  color: var(--color--white);
+  margin: auto;
+  padding:4rem;
+
 }
 button {
   background: #9e2929;
@@ -245,8 +256,7 @@ p {
   align-items: center;
 }
 .pie-pagina .grupo-1 .box figure img {
-  /**/
-  width: 250px;
+  width: 9.375rem;
 }
 .pie-pagina .grupo-1 .box h2 {
   color: #fff;
@@ -269,9 +279,7 @@ p {
   text-align: center;
   transition: all 300ms ease;
 }
-.pie-pagina .grupo-1 .red-social a:hover {
-  color: rgb(29, 168, 168);
-}
+
 .pie-pagina .grupo-2 {
   background-color: #000000;
   padding: 15px 10px;
@@ -282,6 +290,10 @@ p {
   font-size: 15px;
 }
 
+.box a:hover{
+  color: rgb(255, 255, 255);
+
+}
 @media screen and (max-width: 800px) {
   .pie-pagina .grupo-1 {
     width: 50%;
